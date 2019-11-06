@@ -145,6 +145,11 @@ input:checked+.slider:before {
 
 }
 
+.btn{
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
 .btn-primary{
   background: #4A00E0;  /* fallback for old browsers */
   border:0;  
