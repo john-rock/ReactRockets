@@ -9,7 +9,7 @@ Tool to view the upcoming rocket launches from around the world.
 * [Launch Library API](https://launchlibrary.net/)
 
 ## To-Do
-- [] Add search filters
-- [] Setup PWA
+- [ ] Add search filters
+- [ ] Setup PWA
 
 
