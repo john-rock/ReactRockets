@@ -1,22 +1,157 @@
-.App {
+/* Define our color variables */
+
+html {
+  --primary-color: #fff;
+  --secondary-color: #1b1b1b;
+
+  --card-color: #fff;
+}
+
+/* Redefine our color variables if the data-theme attr
+  value is "dark
+*/
+
+html[data-theme="dark"] {
+  --primary-color: #1b1b1b;
+  --secondary-color: #fff;
+  --card-color: #282c34;
+}
+
+
+body, html{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.card{
+  background-color: var(--card-color);
+  color: var(--secondary-color);
+  clear:both;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+
+/* CSS styling for our switch */
+/* This switch was styled with the help of w3schools */
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: 35px;
+  margin:0;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "\f468";
+  font-family: 'Ionicons';
+  height: 26px;
+  width: 26px;
+  line-height: 26px;
+  left: 4px;
+  bottom: 4px;
+  font-size:2.6rem;
+  opacity: 1;
   text-align: center;
+  color:#1b1b1b;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
-.App-logo {
-  height: 40vmin;
+.slider:after {
+  opacity: 0;
+  position: absolute;
+  content: "\f4b7";
+  font-family: 'Ionicons';
+  height: 26px;
+  width: 26px;
+  line-height: 26px;
+  left: 4px;
+  bottom: 4px;
+  font-size:2.6rem;
+  text-align: center;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input:checked+.slider {
+
 }
 
-.App-link {
-  color: #09d3ac;
+input:focus+.slider {
+
+}
+
+input:checked+.slider:after{
+  opacity: 1;
+}
+
+input:checked+.slider:before {
+  /* -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px); */
+  content:'\f4b7';
+  font-family: 'Ionicons';
+  -webkit-transition: .4s;
+  transition: .4s;
+  opacity: 0;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.card-body{
+  position: relative;
+}
+
+.card-body:after{
+  content:'';
+  height:5px;
+  width:100%;
+  position: absolute;
+  left:0;
+  bottom:0;
+  background: #8E2DE2;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+
+}
+
+.btn-primary{
+  background: #4A00E0;  /* fallback for old browsers */
+  border:0;  
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #4A00E0;
+    border-color: #FFF; /*set the color you want here*/
 }

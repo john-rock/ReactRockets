@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "dark-mode-switch": "^1.0.0",
     "react": "^16.10.2",
+    "react-countdown-now": "^2.1.1",
     "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
+    "react-downcount": "^1.0.2",
+    "react-scripts": "3.2.0",
+    "use-dark-mode": "^2.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
