@@ -1,4 +1,4 @@
-@import 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css';
+@import '//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css';
 
 /* Define our color variables */
 
@@ -60,8 +60,6 @@ body, html{
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-transition: .4s;
-  transition: .4s;
 }
 
 .slider:before {
@@ -77,8 +75,6 @@ body, html{
   opacity: 1;
   text-align: center;
   color:#1b1b1b;
-  -webkit-transition: .4s;
-  transition: .4s;
 }
 
 .slider:after {
@@ -93,8 +89,6 @@ body, html{
   bottom: 4px;
   font-size:2.6rem;
   text-align: center;
-  -webkit-transition: .4s;
-  transition: .4s;
 }
 
 input:checked+.slider {
@@ -115,8 +109,6 @@ input:checked+.slider:before {
   transform: translateX(26px); */
   content:'\f4b7';
   font-family: 'Ionicons';
-  -webkit-transition: .4s;
-  transition: .4s;
   opacity: 0;
 }
 
@@ -129,11 +121,17 @@ input:checked+.slider:before {
   border-radius: 50%;
 }
 
-.card-body{
-  position: relative;
+.card{
+  position: relative; 
+  overflow: hidden;
 }
 
-.card-body:after{
+.card-body{
+  position: relative;
+  overflow: hidden;
+}
+
+.card:after{
   content:'';
   height:5px;
   width:100%;

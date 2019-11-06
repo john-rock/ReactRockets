@@ -99,19 +99,19 @@ class App extends Component {
         const endDate = new Date(launch.net);
         const countdownRenderer = ({ days, hrs, mins, secs, isCompleted }) => {
         return isCompleted
-            ? 'Done'
+            ? 'Liftoff!'
             : <Fragment>{days > 0 && `${days} days `}{hrs} hours {doubleDigit(mins)} minutes {doubleDigit(secs)} seconds</Fragment>
       }
         console.log(endDate);
           
         return(
-        <div className="card mb-5 shadow-sm" key={launch.id}>
+        <div className="card mb-5 shadow-sm rounded" key={launch.id}>
           
           <div className="card-body">
             <h3 className="card-title font-weight-bold">{launch.name}</h3>
             <h5 className="card-subtitle mb-3 text-muted">{launch.lsp.name}</h5>
             {launch.missions.map((mission) => (
-              <p className="card-text" key={mission.id}>{mission.description}</p>
+              <p className="card-text mt-4 mb-4" key={mission.id}>{mission.description}</p>
             ))}
 
             <h6>{launch.net}</h6>
