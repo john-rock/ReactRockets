@@ -8,6 +8,7 @@
     "react-countdown-now": "^2.1.1",
     "react-dom": "^16.10.2",
     "react-downcount": "^1.0.2",
+    "react-ionicons": "^3.0.1",
     "react-scripts": "3.2.0",
     "use-dark-mode": "^2.3.1"
   },
