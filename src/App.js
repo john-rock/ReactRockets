@@ -78,8 +78,11 @@ class App extends Component {
 
     return (
       <div className="container clearfix">
-        
-          <label className="switch float-right p-2 m-2">
+
+      <nav class="navbar">
+        <a class="navbar-brand font-weight-bolder" href="#!">NEXT LAUNCH</a>
+
+        <label className="switch float-right p-2 m-2">
             {/* checked attribute is used to determine the state of 
               checkbox
               ----------------------------------------------
@@ -93,6 +96,9 @@ class App extends Component {
             />
             <span className="slider round" />
           </label>
+      </nav>
+        
+
 
         {launches.map((launch) => {
 
@@ -123,7 +129,7 @@ class App extends Component {
               }}
             </Countdown></h6> : <h6>Launch Time TBD</h6>}
 
-            { launch.vidURLs != 0 ? <a href={launch.vidURLs} target="_blank" className="btn btn-primary m-5">View Stream</a> : <a className="btn btn-outline-secondary mt-3 disabled">Stream Unavailable</a>}
+            { launch.vidURLs != 0 ? <a href={launch.vidURLs} target="_blank" className="btn btn-primary mt-3">View Stream</a> : <a className="btn btn-outline-secondary mt-3 disabled">Stream Unavailable</a>}
 
             
           </div>
