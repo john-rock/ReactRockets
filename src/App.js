@@ -73,7 +73,7 @@ class App extends Component {
   render() {
     const { launches } = this.state;
     
-    console.log(launches.launches) 
+    // console.log(launches.launches) 
  
 
     return (
@@ -108,7 +108,6 @@ class App extends Component {
             ? 'Liftoff!'
             : <Fragment>{days > 0 && `${days} days `}{hrs} hours {doubleDigit(mins)} minutes {doubleDigit(secs)} seconds</Fragment>
       }
-        console.log(endDate);
           
         return(
         <div className="card mb-5 shadow-sm rounded" key={launch.id}>
