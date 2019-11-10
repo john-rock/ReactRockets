@@ -1,4 +1,4 @@
-[https://reactrockets.netlify.com/](https://reactrockets.netlify.com/)
+[https://reactrockets.netlify.com/](https://next-launch.netlify.com/)
 
 # React Rockets
 
