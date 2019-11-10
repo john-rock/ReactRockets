@@ -1,6 +1,6 @@
 [https://next-launch.netlify.com/](https://next-launch.netlify.com/)
 
-# React Rockets
+# Next Launch
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/dfb9496b-254f-46b8-8d1f-ea042e965651/deploy-status)](https://app.netlify.com/sites/reactrockets/deploys)
 
