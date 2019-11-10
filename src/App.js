@@ -79,8 +79,8 @@ class App extends Component {
     return (
       <div className="container clearfix">
 
-      <nav class="navbar">
-        <a class="navbar-brand font-weight-bolder" href="#!">NEXT LAUNCH</a>
+      <nav className="navbar">
+        <h1 className="navbar-brand font-weight-bolder m-0">NEXT LAUNCH</h1>
 
         <label className="switch float-right p-2 m-2">
             {/* checked attribute is used to determine the state of 
