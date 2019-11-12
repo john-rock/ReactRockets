@@ -103,11 +103,6 @@ class App extends Component {
         {launches.map((launch) => {
 
         const endDate = new Date(launch.net);
-        const countdownRenderer = ({ days, hrs, mins, secs, isCompleted }) => {
-        return isCompleted
-            ? 'Liftoff!'
-            : <Fragment>{days > 0 && `${days} days `}{hrs} hours {doubleDigit(mins)} minutes {doubleDigit(secs)} seconds</Fragment>
-      }
           
         return(
         <div className="card mb-5 shadow-sm rounded" key={launch.id}>
@@ -123,8 +118,10 @@ class App extends Component {
             
 
             { launch.netstamp != 0 ? <h6><Countdown className="custom-counter" endDate={endDate}>
-              {({ days, hrs, mins, secs }) => {
-                return `${days} days ${hrs}h ${doubleDigit(mins)}m ${doubleDigit(secs)}s`;
+              {({ days, hrs, mins, secs, isCompleted }) => {
+               return isCompleted ? (
+                <span className="completed">Liftoff!</span>
+              ) : `${days} days ${hrs}h ${doubleDigit(mins)}m ${doubleDigit(secs)}s`;
               }}
             </Countdown></h6> : <h6>Launch Time TBD</h6>}
 
